@@ -28,7 +28,7 @@ bash train.sh
 ```
 **Finetune**
 
-We provide example code for fine-tuning on the BraTS-GLI dataset, which you can modify to suit your own task.
+We provide example code for fine-tuning on the BraTS-GLI dataset in the scripts folder, which you can modify to suit your own task.
 ```bash 
 # finetune
 bash fine_tuning_classify.sh
