@@ -45,9 +45,10 @@ A lot of code is modified from [MultiMAE](https://github.com/EPFL-VILAB/MultiMAE
 
 If you find this repository useful, please consider citing this paper:
 ```
-@inproceedings{discrepmamba,
-  title={Beyond Priors: A Consecutive Encoding by Self-Supervised Learning with Mamba plus Modality Discrepancy Loss for Brain MRI},
-  author={Yumeng Jia, Cong Shen, Haifeng Wang, Shengyong Chen, Shiqiang Mang},
-  year={2026}
+@unpublished{discrepmamba,
+  title   = {Beyond Priors: A Consecutive Encoding by Self-Supervised Learning with Mamba plus Modality Discrepancy Loss for Brain MRI},
+  author  = {Yumeng Jia and Cong Shen and Haifeng Wang and Shengyong Chen and Shiqiang Mang},
+  note    = {submitted for publication},
+  year    = {2026}
 }
 ```
