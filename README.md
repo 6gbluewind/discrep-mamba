@@ -2,11 +2,11 @@
 
 This work introduces DiscrepMamba, a consecutive encoding by self-supervised learning with Mamba plus modality discrepancy Loss for brain MRI.
 
-We achieve state-of-the-art performance on 9 open-source segmentation and classification tasks. Feel free to use it to adapt to your own tasks!
+We achieve state-of-the-art performance on three open-source segmentation and three classification tasks. Feel free to use it to adapt to your own tasks!
 
 
 ## Abstract
-Self-supervised learning (SSL) reduces the annotation cost by generating pseudo labels or supervisory signals which uses these labels to train the model. It always uses a small-scale dataset in the downstream tasks fine-tuning likes medical image processing including brain magnetic resonance imaging (MRI), since SSL could significantly improve the amount of medical images requirements. However, for brain MRI, which is essential for diagnosing most neural system and soft tissue pathological changes, existing works have not fully analyzed the relationships between different modalities, but merely treated them as prior knowledge. To this end, A consecutive encoding by SSL with Mamba plus modality discrepancy loss strategy named DiscrepMamba is proposed in this study to confront the situation of similarities and differences coexist in brain MRI processing. Specifically, DiscrepMamba first conducts a systematic data analysis of multimodal brain MRI. Based on the findings, a two-stage encoding strategy is proposed to preserve modality independence and inter-modal complementarity. Then, a Structure-Aware Frequency Consistency (SAFC) loss is incorporated to protect the complex relationships between different modalities. To prove the effectiveness of DiscrepMamba, extensive experiments have been conducted on six datasets in two downstream tasks including segmentation and classification. Compared with the state-of-the-art works, DiscrepMamba has achievedsuperior performance on three segmentation tasks, including the Dice score increased by 1.09\%-7.99\%; in three classification tasks, the accuracy increased by 0.33\%-2.06\%.
+Self-supervised learning (SSL) reduces annotation costs by generating pseudo-labels or supervisory signals and using them to train the model. It often uses a small-scale dataset in downstream tasks for fine-tuning in medical image processing, including brain magnetic resonance imaging (MRI), since SSL can significantly reduce the amount of medical image data required. However, for brain MRI, which is essential for diagnosing most neural system and soft tissue pathological changes, existing works have not fully analyzed the similarity and complementarity of the relationships between different modalities, but merely treated them as prior knowledge. To this end, DiscrepMamba is proposed, an SSL strategy with cascading encoders and modality structural discrepancy mediated by 3D reconstruction for brain MRI. Specifically, this study has investigated that the inter-modal differences primarily stem from structural heterogeneity, manifesting as divergent anatomical boundaries, distinct local gradient responses, and modality-specific structural characteristics. Their similarity, by contrast, arises from strong linear correlations in voxel intensity rather than from structural equivalence itself. Based on these findings, the cascading encoders are built upon the multi-task masked autoencoder with Vision Mamba. A Structure-Aware Frequency Consistency loss is further incorporated to enhance the model's representational capability through explicit structural constraints mediated by 3D reconstruction. Extensive experiments on six downstream brain MRI datasets across segmentation and classification demonstrate that DiscrepMamba generally outperforms the state-of-the-art works, with Dice score improvements of 4.51\% on average across three segmentation tasks and accuracy improvements of 3.24\% on average across three classification tasks.
 ![overview](models/backbone.png)
 
 ## Datasets
@@ -46,8 +46,8 @@ A lot of code is modified from [MultiMAE](https://github.com/EPFL-VILAB/MultiMAE
 If you find this repository useful, please consider citing this paper:
 ```
 @unpublished{discrepmamba,
-  title   = {Beyond Priors: A Consecutive Encoding by Self-Supervised Learning with Mamba plus Modality Discrepancy Loss for Brain MRI},
-  author  = {Yumeng Jia and Cong Shen and Haifeng Wang and Shengyong Chen and Shiqiang Mang},
+  title   = {Structure Beyond Intensity: Modality Discrepancy Preservation for Self-Supervised Brain MRI},
+  author  = {Jia, Yumeng and Shen, Cong and Wang, Haifeng and Ma, Shiqiang and Chen, Shengyong and Tang, Jijun and Liao, Zhijun},
   note    = {submitted for publication},
   year    = {2026}
 }
