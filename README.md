@@ -10,7 +10,7 @@ Self-supervised learning (SSL) reduces annotation costs by generating pseudo-lab
 
 
 ## Datasets
-![dataset](data/dataset.bmp)
+![dataset](data/dataset.png)
 
 All downstream datasets are open-source.
 ## Get Started
