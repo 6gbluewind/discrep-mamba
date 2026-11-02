@@ -36,11 +36,6 @@ bash fine_tuning_classify.sh
 bash evaluate_classify.sh
 ```
 
-## 🙏 Acknowledgement
-
-A lot of code is modified from [MultiMAE](https://github.com/EPFL-VILAB/MultiMAE).
-
-
 ## 📝 Citation
 
 If you find this repository useful, please consider citing this paper:
